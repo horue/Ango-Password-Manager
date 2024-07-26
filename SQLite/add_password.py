@@ -6,6 +6,12 @@ def add_password_db(service, login, password):
     cursor = connection.cursor()
 
 
-    cursor.execute(f'''INSERT INTO pssws(service, login, password) VALUES({service},{login},{password})''')
+    cursor.execute('''
+        INSERT INTO pssws(service, login, password) VALUES(?, ?, ?)
+    ''', (service, login, password))
     connection.commit()
     connection.close()
+
+if __name__ == '__main__':
+    add_password_db(service='YT',login='email',password='senha')
+    add_password_db(service='KR',login='e',password='ef')
