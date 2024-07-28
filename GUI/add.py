@@ -14,6 +14,9 @@ class toplevel():
         tl.resizable(False, False)
         tl.grab_set()
 
+        l1 = ct.CTkLabel(tl, text='Add new password')
+        l1.pack()
+
         e1 = ct.CTkEntry(tl, placeholder_text='Service')
         e1.pack(pady=(300, 0))
 
@@ -27,6 +30,6 @@ class toplevel():
         b1.pack()
         
         for child in tl.winfo_children():
-            child.pack_configure(padx=10, pady=10)
+            child.pack_configure(padx=10, pady=15)
 
         
