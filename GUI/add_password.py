@@ -11,7 +11,3 @@ def add_password_db(service, login, password):
     ''', (service, login, password))
     connection.commit()
     connection.close()
-
-if __name__ == '__main__':
-    add_password_db(service='YT',login='email',password='senha')
-    add_password_db(service='KR',login='e',password='ef')
